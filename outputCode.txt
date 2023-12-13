@@ -1,0 +1,191 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Crime Guard App',
+      initialRoute: '/',
+      routes: {
+        '/': (context) => HomeScreen(),
+        '/personality_assessment': (context) => PersonalityAssessmentScreen(),
+      },
+    );
+  }
+}
+
+class HomeScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Crime Guard App'),
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            ElevatedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/personality_assessment');
+              },
+              child: Text('Personality Assessment'),
+            ),
+            SizedBox(height: 20),
+            CrimePredictionWidget(),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class PersonalityAssessmentScreen extends StatefulWidget {
+  @override
+  _PersonalityAssessmentScreenState createState() =>
+      _PersonalityAssessmentScreenState();
+}
+
+class _PersonalityAssessmentScreenState
+    extends State<PersonalityAssessmentScreen> {
+  int _selectedOption1 = -1;
+  int _selectedOption2 = -1;
+  int _selectedOption3 = -1;
+  int _selectedOption4 = -1;
+  int _selectedOption5 = -1;
+  final List<String> _questions = [
+    'How often do you feel overwhelmed by your emotions?',
+    'How often do you feel anxious or nervous?',
+    'How often do you feel angry or irritable?',
+    'How often do you feel sad or depressed?',
+    'How often do you feel lonely or isolated?',
+  ];
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Personality Assessment'),
+      ),
+      body: ListView.builder(
+        itemCount: _questions.length,
+        itemBuilder: (context, index) {
+          return ListTile(
+            title: Text(_questions[index]),
+            subtitle: Row(
+              children: <Widget>[
+                Radio(
+                  value: 0,
+                  groupValue: _getSelectedOption(index),
+                  onChanged: (value) {
+                    setState(() {
+                      _setSelectedOption(index, value);
+                    });
+                  },
+                ),
+                Text('Never'),
+                Radio(
+                  value: 1,
+                  groupValue: _getSelectedOption(index),
+                  onChanged: (value) {
+                    setState(() {
+                      _setSelectedOption(index, value);
+                    });
+                  },
+                ),
+                Text('Rarely'),
+                Radio(
+                  value: 2,
+                  groupValue: _getSelectedOption(index),
+                  onChanged: (value) {
+                    setState(() {
+                      _setSelectedOption(index, value);
+                    });
+                  },
+                ),
+                Text('Sometimes'),
+                Radio(
+                  value: 3,
+                  groupValue: _getSelectedOption(index),
+                  onChanged: (value) {
+                    setState(() {
+                      _setSelectedOption(index, value);
+                    });
+                  },
+                ),
+                Text('Often'),
+                Radio(
+                  value: 4,
+                  groupValue: _getSelectedOption(index),
+                  onChanged: (value) {
+                    setState(() {
+                      _setSelectedOption(index, value);
+                    });
+                  },
+                ),
+                Text('Always'),
+              ],
+            ),
+          );
+        },
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          // Perform assessment calculation
+        },
+        child: Icon(Icons.check),
+      ),
+    );
+  }
+
+  int _getSelectedOption(int index) {
+    switch (index) {
+      case 0:
+        return _selectedOption1;
+      case 1:
+        return _selectedOption2;
+      case 2:
+        return _selectedOption3;
+      case 3:
+        return _selectedOption4;
+      case 4:
+        return _selectedOption5;
+      default:
+        return -1;
+    }
+  }
+
+  void _setSelectedOption(int index, int value) {
+    switch (index) {
+      case 0:
+        _selectedOption1 = value;
+        break;
+      case 1:
+        _selectedOption2 = value;
+        break;
+      case 2:
+        _selectedOption3 = value;
+        break;
+      case 3:
+        _selectedOption4 = value;
+        break;
+      case 4:
+        _selectedOption5 = value;
+        break;
+    }
+  }
+}
+
+class CrimePredictionWidget extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: Text('Crime Prediction'),
+    );
+  }
+}
+
