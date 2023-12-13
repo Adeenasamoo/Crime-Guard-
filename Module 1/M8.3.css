@@ -1,0 +1,170 @@
+
+body {
+    background-image: url('file:///C:/Users/Adeena/Desktop/Module 1/BG.jpg');
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+}
+
+
+.heading-button {
+    background-color: #d89d9d; /* Peachish red color */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%; /* Makes the button expand to the full width */
+    text-align: left; /* Aligns text to the left */
+}
+
+.heading-button:hover {
+    background-color: #beaeae; /* Darker shade on hover */
+}
+
+.heading-button h2 {
+    margin: 0; /* Removes default margin from h2 inside button */
+}
+
+header {
+background-color: #d48383; /* Black header */
+color: #050404; /* Peachish red for text */
+text-align: center;
+padding: 20px 0;
+}
+
+h1 {
+margin: 0;
+}
+
+section {
+background-color: white;
+margin: 20px auto;
+padding: 20px;
+border-radius: 8px;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+max-width: 800px;
+}
+
+h2 {
+color: #030303; 
+}
+
+p {
+font-size: 1.1em;
+line-height: 1.5;
+}
+
+#feedbackForm {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+}
+
+#feedbackInput {
+flex: 1;
+padding: 10px;
+margin-right: 10px;
+border-radius: 4px;
+border: 1px solid #ddd;
+}
+
+button {
+padding: 10px 20px;
+background-color: #ff6b6b; /* Peachish red for button */
+color: white;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+transition: background-color 0.3s ease;
+}
+
+button:hover {
+background-color: #e55e5e; /* Darker shade for hover effect */
+}
+
+@media (max-width: 600px) {
+#feedbackInput {
+    margin-bottom: 10px;
+}
+
+button {
+    width: 100%;
+}
+
+
+#calendar {
+    max-width: 900px;
+    margin: 40px auto;
+}
+
+#campaignChart {
+    max-width: 600px;
+    margin: 20px auto;
+}
+/* Styling for the campaign section */
+#campaign-content {
+    background-color: #c08686; /* Light background color */
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.campaign-text {
+    flex: 1;
+}
+
+.campaign-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.share-button,
+.like-button,
+.comment-button {
+    background-color: #ff6b6b; /* Peachish red color */
+    color: rgb(218, 129, 129);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.share-button:hover,
+.like-button:hover,
+.comment-button:hover {
+    background-color: #e55e5e; /* Darker shade on hover */
+}
+
+/* Styling for the spotlight section */
+#spotlight {
+    background-color: #d48d8d; /* White background color */
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#spotlight h2 {
+    color: #ff6b6b; /* Peachish red color */
+}
+
+.spotlight-item {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.spotlight-item img {
+    max-width: 100px;
+    max-height: 100px;
+    margin-right: 10px;
+}
+
+.spotlight-item a {
+    color: #333; /* Dark text color */
+    text-decoration: none;
+}

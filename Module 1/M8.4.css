@@ -1,0 +1,153 @@
+nav {
+    background-color: #ff6b6b; /* Peachish red color */
+    padding: 10px 0;
+}
+
+.nav-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-list li {
+    margin: 0 10px;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-list a:hover {
+    color: #fff; /* Lighter color on hover */
+}
+
+/* Styling for the search section */
+#search-section {
+    background-color: #f2f2f2; /* Light background color */
+    padding: 20px;
+    text-align: center;
+}
+
+.search-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#searchInput {
+    padding: 10px;
+    width: 70%;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+}
+
+#searchButton {
+    background-color: #ff6b6b; /* Peachish red color */
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    padding: 10px 20px;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s;
+}
+
+#searchButton:hover {
+    background-color: #e55e5e; /* Darker shade on hover */
+}
+
+/* Styling for the content section */
+#content {
+    padding: 20px;
+}
+
+body {
+    background-image: url('file:///C:/Users/Adeena/Desktop/Module 1/BG.jpg');
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+}
+
+
+.heading-button {
+    background-color: #d89d9d; /* Peachish red color */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%; /* Makes the button expand to the full width */
+    text-align: left; /* Aligns text to the left */
+}
+
+.heading-button:hover {
+    background-color: #beaeae; /* Darker shade on hover */
+}
+
+.heading-button h2 {
+    margin: 0; /* Removes default margin from h2 inside button */
+}
+
+header {
+background-color: #d48383; /* Black header */
+color: #050404; /* Peachish red for text */
+text-align: center;
+padding: 20px 0;
+}
+
+h1 {
+margin: 0;
+}
+
+section {
+background-color: white;
+margin: 20px auto;
+padding: 20px;
+border-radius: 8px;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+max-width: 800px;
+}
+
+h2 {
+color: #030303; 
+}
+
+p {
+font-size: 1.1em;
+line-height: 1.5;
+}
+
+#feedbackForm {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+}
+
+#feedbackInput {
+flex: 1;
+padding: 10px;
+margin-right: 10px;
+border-radius: 4px;
+border: 1px solid #ddd;
+}
+
+button {
+padding: 10px 20px;
+background-color: #ff6b6b; /* Peachish red for button */
+color: white;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+transition: background-color 0.3s ease;
+}
+
+button:hover {
+background-color: #e55e5e; /* Darker shade for hover effect */
+}
